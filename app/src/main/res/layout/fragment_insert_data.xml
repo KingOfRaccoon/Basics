@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center_horizontal|top"
+            android:lineSpacingExtra="0sp"
+            android:elevation="100dp"
+            android:textSize="48sp"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextNormalTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:selectAllOnFocus="true"
+            android:hint="@string/name"
+            android:elevation="100dp"
+            style="@style/FioMaterialEditText"
+            app:startIconContentDescription="@string/prompt_email"
+            app:startIconDrawable="@drawable/person_24"
+            app:layout_constraintTop_toBottomOf="@id/text_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/family_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/family"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:selectAllOnFocus="true"
+            android:elevation="100dp"
+            style="@style/FioMaterialEditText"
+            app:startIconContentDescription="@string/prompt_email"
+            app:startIconDrawable="@drawable/person_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_container">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/family"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/number_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintTop_toBottomOf="@id/family_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:elevation="100dp"
+            app:startIconContentDescription="@string/number"
+            app:startIconDrawable="@drawable/call_24"
+            style="@style/FioMaterialEditText"
+            android:hint="@string/number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/number"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/prompt_email"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:selectAllOnFocus="true"
+            android:elevation="100dp"
+            style="@style/FioMaterialEditText"
+            app:startIconContentDescription="@string/prompt_email"
+            app:startIconDrawable="@drawable/email_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/number_container">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:selectAllOnFocus="true"
+            android:elevation="100dp"
+            style="@style/FioMaterialEditText"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true"
+            app:startIconContentDescription="@string/prompt_password"
+            app:startIconDrawable="@drawable/vpn_key_24"
+            app:layout_constraintTop_toBottomOf="@id/email_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:hint="@string/prompt_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/password"
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_repeat_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password_repeat"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:elevation="100dp"
+            style="@style/FioMaterialEditText"
+            android:selectAllOnFocus="true"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true"
+            app:startIconContentDescription="@string/prompt_password"
+            app:startIconDrawable="@drawable/vpn_key_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_container">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:id="@+id/password_repeat"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registration"
+            android:text="@string/regist_done"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            style="@style/GreenMaterialButtonFill"
+            app:layout_constraintTop_toBottomOf="@id/password_repeat_container"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
